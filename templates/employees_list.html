@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block title %}Сотрудники{% endblock %}
+{% block content %}
+    <div id="main_content">
+        <section class="background_white">
+            <div class="row">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="/">Главная</a>
+                    <span class="breadcrumb-item active">Сотрудники</span>
+                </nav>
+                <div style="text-align: center">
+                    {% for x in employees %}
+                        {% if x.is_active %}
+                            {% if x.is_head %}
+                                <div class="card" style="width: 30%; margin: 0 10px 20px 10px; display: inline-block; min-width: 250px">
+                                    <img class="card-img-top" style="max-height: 370px;" src="/media/{{ x.photo }}" alt="{{ x.surname }} {{ x.name }} {{ x.second_name }}">
+                                    <div class="card-block">
+                                        <h5 class="card-title">{{ x.surname|upper }}</h5>
+                                        <h5 class="card-subtitle">{{ x.name }} {{ x.second_name }}</h5>
+                                        {% with x.specialty_as_list as specialytis %}
+                                            <p class="card-text">
+                                                    <div style="height: 65px">
+                                                        <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                                            <span class="badge badge-success" >
+                                                                ГЛАВНЫЙ ВРАЧ
+                                                            </span>
+                                                        </h6>
+                                                        {% for i in specialytis %}
+                                                             <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                                                <span class="badge badge-info" >
+                                                                    {{ i|upper }}
+                                                                </span>
+                                                            </h6>
+                                                        {% endfor %}
+                                                    </div>
+                                            </p>
+                                        {% endwith %}
+                                        <a href="{{ x.pk }}/" class="btn btn-outline-info btn-sm">Подробно</a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    <!--Выводим главного врача-->
+                    {% for x in employees %}
+                        {% if x.is_active %}
+                            {% if x.candidate_of_medical_sciences %}
+                                <div class="card" style="width: 30%; margin: 0 10px 20px 10px; display: inline-block; min-width: 250px">
+                                    <img class="card-img-top" style="max-height: 370px;" src="/media/{{ x.photo }}" alt="{{ x.surname }} {{ x.name }} {{ x.second_name }}">
+                                    <div class="card-block">
+                                        <h5 class="card-title">{{ x.surname|upper }}</h5>
+                                        <h5 class="card-subtitle">{{ x.name }} {{ x.second_name }}</h5>
+                                        {% with x.specialty_as_list as specialytis %}
+                                            <p class="card-text">
+                                                    <div style="height: 65px">
+                                                            <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                                                <span class="badge badge-danger" >
+                                                                    КМН
+                                                                </span>
+                                                            </h6>
+                                                        {% for i in specialytis %}
+                                                             <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                                                <span class="badge badge-info" >
+                                                                    {{ i|upper }}
+                                                                </span>
+                                                            </h6>
+                                                        {% endfor %}
+                                                    </div>
+                                            </p>
+                                        {% endwith %}
+                                        <a href="{{ x.pk }}/" class="btn btn-outline-info btn-sm">Подробно</a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    <!--Выводим КМН-->
+                    {% for x in employees %}
+                        {% if x.is_active %}
+                            {% if not x.is_head and not x.candidate_of_medical_sciences and x.description %}
+                                <div class="card" style="width: 30%; margin: 0 10px 20px 10px; display: inline-block; min-width: 250px">
+                                    <img class="card-img-top" style="max-height: 370px;" src="/media/{{ x.photo }}" alt="{{ x.surname }} {{ x.name }} {{ x.second_name }}">
+                                    <div class="card-block">
+                                        <h5 class="card-title">{{ x.surname|upper }}</h5>
+                                        <h5 class="card-subtitle">{{ x.name }} {{ x.second_name }}</h5>
+                                        {% with x.specialty_as_list as specialytis %}
+                                            <p class="card-text">
+                                                    <div style="height: 65px">
+                                                        {% for i in specialytis %}
+                                                             <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                                                <span class="badge badge-info" >
+                                                                    {{ i|upper }}
+                                                                </span>
+                                                            </h6>
+                                                        {% endfor %}
+                                                    </div>
+                                            </p>
+                                        {% endwith %}
+                                        <a href="{{ x.pk }}/" class="btn btn-outline-info btn-sm">Подробно</a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    <!--Выводим сотрудников с заполненой квалификацией-->
+                    {% for x in employees %}
+                        {% if x.is_active %}
+                            {% if not x.is_head and not x.candidate_of_medical_sciences and not x.description %}
+                                <div class="card" style="width: 30%; margin: 0 10px 20px 10px; display: inline-block; min-width: 250px">
+                                    <img class="card-img-top" style="max-height: 370px;" src="/media/{{ x.photo }}" alt="{{ x.surname }} {{ x.name }} {{ x.second_name }}">
+                                    <div class="card-block">
+                                        <h5 class="card-title">{{ x.surname|upper }}</h5>
+                                        <h5 class="card-subtitle">{{ x.name }} {{ x.second_name }}</h5>
+                                        {% with x.specialty_as_list as specialytis %}
+                                            <p class="card-text">
+                                                    <div style="height: 65px">
+                                                        {% for i in specialytis %}
+                                                             <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                                                <span class="badge badge-info" >
+                                                                    {{ i|upper }}
+                                                                </span>
+                                                            </h6>
+                                                        {% endfor %}
+                                                    </div>
+                                            </p>
+                                        {% endwith %}
+                                        <a href="{{ x.pk }}/" class="btn btn-outline-info btn-sm">Подробно</a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %} <!--Выводим выводим сотрудников с незаполненой квалификацией-->
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+

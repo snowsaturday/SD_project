@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}{{ employe.surname }} {{ employe.name }} {{ employe.second_name }}{% endblock %}
+{% block content %}
+<div id="main_content">
+    <section class="background_white">
+        <div class="row">
+            <nav class="breadcrumb">
+                <a class="breadcrumb-item" href="/">Главная</a>
+                <a class="breadcrumb-item" href="/employees/">Сотрудники</a>
+                <span class="breadcrumb-item active">{{ employe.surname }} {{ employe.name }} {{ employe.second_name }}</span>
+            </nav>
+            <div class="one_third">
+                <div style="text-align: center">
+                    <div class="card" style="width: 30%; margin: 0 10px 20px 10px; display: inline-block; min-width: 275px">
+                        <img class="card-img-top" style="max-height: 370px;" src="/media/{{ employe.photo }}" alt="{{ employe.surname }} {{ employe.name }} {{ employe.second_name }}">
+                        <div class="card-block">
+                            <h5 class="card-title">{{ employe.surname|upper }}</h5>
+                            <h5 class="card-subtitle">{{ employe.name }} {{ employe.second_name }}</h5>
+                            {% with employe.specialty_as_list as specialytis %}
+                                <p class="card-text">
+                                <div style="height: 65px">
+                                    {% if employe.is_head %}
+                                        <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                            <span class="badge badge-success" >
+                                            ГЛАВНЫЙ ВРАЧ
+                                            </span>
+                                        </h6>
+                                    {% endif %}
+                                    {% if employe.candidate_of_medical_sciences %}
+                                        <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                            <span class="badge badge-danger" >
+                                            КМН
+                                            </span>
+                                        </h6>
+                                    {% endif %}
+                                    {% for i in specialytis %}
+                                    <h6 style="display: inline-block; margin: 0 0 0 0;">
+                                        <span class="badge badge-info" >
+                                        {{ i|upper }}
+                                        </span>
+                                    </h6>
+                                    {% endfor %}
+                                </div>
+                                </p>
+                            {% endwith %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="two_thirds last">
+            <h6>{{ employe.name }} {{ employe.second_name }} {% if employe.man %}предоставил{% else %}предоставила{% endif %} нижеследующую информацию о квалификации:</h6>
+            <br>
+            {% for x in employe.description_as_list %}
+                {% if x %}
+                    <div class="alert alert-success" role="alert">
+                        {% autoescape off %}
+                            {{ x }}
+                        {% endautoescape %}
+                    </div>
+                {% else %}
+                    <div class="alert alert-warning" role="alert">
+                        <p>Информация о квалификации уточняется и будет доступна в ближайшее время!<strong>Приносим извинения за доставленные неудобаства.</strong>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            {% if employe.work_with %}
+                <br>
+                <h6>Дата трудоустройства: {{ employe.work_with|date:'F Y года' }}</h6>
+                <br>
+            {% endif %}
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+

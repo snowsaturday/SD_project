@@ -1,0 +1,928 @@
+
+*,*:before,*:after{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,blockquote,th,td{
+    margin:0;
+    padding:0;
+    font-size:13px;
+    direction:ltr
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:#fff;
+    font-family:'Open Sans',sans-serif,Arial,Helvetica;color:#333;
+    -webkit-font-smoothing:antialiased
+}
+
+.nav_style {
+margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.nav-link {
+    font-size: 15px;
+    padding: 5px;
+}
+
+
+
+
+.nav_call_number {
+    font-size: 22px;
+    position: absolute;
+    right: 0;
+}
+
+
+.row{
+    width:940px;
+    margin:0 auto;
+    padding:15px 0 15px 0;
+    overflow:hidden
+}
+
+.row_baner{
+    width:940px;
+    text-align: center;
+    margin:0 auto;
+    padding:15px 0 15px 0;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /*flex-direction: column-reverse;*/
+}
+
+.login {
+	width:220px;
+}
+
+.login h1 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    letter-spacing:1px; text-align:center;
+}
+
+.login input {
+	width: 100%;
+    height: 40px;
+    text-align:center;
+	margin-bottom: 2px;
+	background: rgba(0,125,182,0.3);
+	border: none;
+	outline: none;
+	padding: 5px;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	border: 1px solid rgba(0,87,127,0.2);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.1), 0 1px 1px rgba(255,255,255,0.1);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+
+}
+
+#login-btn {
+      font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.login input:focus {
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.5), 0 1px 1px rgba(255,255,255,0.2);
+}
+
+    ::-webkit-input-placeholder {color:#FFF; text-align: center}
+    ::-moz-placeholder          {color:#FFF; text-align: center}/* Firefox 19+ */
+    :-moz-placeholder           {color:#FFF; text-align: center}/* Firefox 18- */
+    :-ms-input-placeholder      {color:#FFF; text-align: center}
+
+
+.baner_block {
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.baner_logo {
+    width: 205px;
+}
+
+.medcent_string {
+     font-size: 19px;
+    color: #007db6;
+    text-align: right;
+}
+
+.studio_string {
+    font-size: 26px;
+    color: #007db6;
+    text-align: right;
+}
+
+.lk_string {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #007db6;
+    position: relative;
+}
+
+/*.lic_string {*/
+    /*font-size: 6px;*/
+    /*text-align: center;*/
+    /*!*margin-bottom: 5px;*!*/
+    /*color: rgba(75, 170, 214, 0.64);*/
+     /*position: relative;*/
+
+
+
+/*}*/
+
+/*.lic_string_wrapper {*/
+
+
+
+/*}*/
+
+
+
+.row img{
+    height:auto;
+    max-width:100%
+}
+
+.main_group_img {
+    max-height: 100px;
+}
+
+.main_group_title {
+     font-size: 8px;
+}
+
+a{
+    color:#005699;
+    text-decoration:none;
+    line-height:inherit
+}
+
+
+a img{border:none}
+
+.background_grey{
+    background:#f1f1f1;
+    border-top:1px solid #e5e5e5;
+    border-bottom:1px solid #e5e5e5
+}
+
+.background_white{
+    background:#fff;
+    border-bottom:1px solid #e5e5e5
+}
+
+.hint{
+    font-size:0.9em;
+    color:#fff}
+
+.last{
+    margin-right:0!important
+}
+
+.left{
+    float:left
+}
+
+.right{
+    float:right
+}
+
+
+
+h1,h2{font-family:'Bree Serif',serif}
+
+#main_content h2{margin-bottom:10px}
+
+#main_content h3{font-family:'Open Sans',sans-serif,Arial,Helvetica;
+    font-size:1.2em;
+    font-weight:normal;
+    color:#999
+}
+
+h4,h5,h6{
+    font-family:'Open Sans',sans-serif,Arial,Helvetica;
+    font-weight:bold;
+    font-style:normal;
+    color:#222;
+    text-rendering:optimizeLegibility;
+    line-height:1.1;
+    margin-bottom:13px;
+    margin-top:13px}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small{
+    font-size:60%;
+    color:#6f6f6f;
+    line-height:0
+}
+
+h1{font-size:3.2em}
+h2{font-size:1.7em}
+h3{font-size:1.6em}
+h4{font-size:1.4em}
+h5{font-size:1.2em}
+
+#logo{color:#fff}
+
+#logo img{
+    float:left;
+    margin:0 15px 0 0
+}
+
+#logo h1{
+    font-family:'Open Sans',sans-serif,Arial,Helvetica;
+    font-weight:400;
+    font-size:2.1em;
+    display:inline;
+    margin:0 10px 0 0}
+
+#logo h2{
+    font-family:'Open Sans',sans-serif,Arial,Helvetica;
+    font-weight:300;
+    font-size:1.2em;
+    font-style:italic;
+    display:inline;
+    margin:0 10px 0 0
+}
+
+#banner .one_half h1{
+    line-height:1.1em;
+    margin:25px 0 15px 0
+}
+
+h2.subheader{
+    font-family:'Open Sans',sans-serif,Arial,Helvetica;
+    font-weight:300;
+    font-size:1.4em;
+    margin-bottom:15px
+}
+
+#main_content h2{
+    font-family:'Bree Serif',serif;
+    font-weight:400;
+    color:#333;
+    font-size:2.0em
+}
+
+/*Изменяем вывод категорий на главной странице в зависимости от разрешения*/
+.group_items_lg {
+    visibility: visible;
+    display: unset;
+}
+
+.group_items_sm {
+    visibility: hidden;
+    display: none;
+}
+
+
+/*Изменяем вывод категорий на главной странице в зависимости от разрешения*/
+.group_items_lg_button {
+    visibility: visible;
+    display: unset;
+}
+
+.group_items_sm_button {
+    visibility: hidden;
+    display: none;
+}
+
+
+
+.section_title span{
+    background:#fff;
+    padding:0 25px 0 25px
+}
+
+.background_grey .section_title span{
+    background:#f1f1f1;
+    padding:0 25px 0 25px
+
+}
+
+
+
+.one_half,.one_third,.two_thirds,.three_fourths,.one_fourth{
+    float:left;
+    margin:0 20px 20px 0;
+    position:relative
+}
+
+.one_half{width:460px}
+
+.one_third{width:300px}
+
+.two_thirds{width:620px}
+
+.one_fourth{width:220px}
+
+.three_fourths{width:700px}
+
+#header_region{
+    padding:0 0 35px 0;
+    overflow:hidden
+}
+
+#banner{
+    background: #2C2E2D url('/media/head_background.png') no-repeat local center top;
+    background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    color:#fff;
+    padding:30px 0 30px 0}
+
+#banner .row_banner{clear:both}
+
+
+
+
+#page_footer{
+    background:url('/media/footer_background.png') no-repeat center top #2C2E2D;
+    background-attachment:local;
+    background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    color:#fff;
+    padding:10px 0 10px 0}
+
+#page_footer.row{
+    padding:15px 0 15px 0
+}
+
+#page_footer ul, #page_footer p{
+    display:inline;
+    margin:0;
+    padding:0
+}
+
+
+#page_footer ul li{
+    display:inline;
+    padding:0 5px 0 0
+}
+
+#page_footer a{
+    color:#999
+}
+
+
+@-moz-keyframes
+rightSpring{
+    0%{margin-left:0px}
+    50%{margin-left:-30px}
+    100%{margin-left:0px}
+}
+
+@-moz-keyframes
+leftSpring{
+    0%{margin-left:0px}
+    50%{margin-left:30px}
+    100%{margin-left:0px}
+}
+
+@-webkit-keyframes
+rightSpring{
+    0%{margin-left:0px}
+    50%{margin-left:-30px}
+    100%{margin-left:0px}
+}
+
+@-webkit-keyframes
+leftSpring{
+    0%{margin-left:0px}
+    50%{margin-left:30px}
+    100%{margin-left:0px}
+
+}
+
+
+
+@media screen and (min-width : 761px ) and (max-width: 1005px){
+    .row{width:730px;
+        margin:0 auto;
+        padding:15px 0 15px 0;
+
+    }
+
+    .row_baner{
+    width:730px;
+    text-align: center;
+    margin:0 auto;
+    padding:15px 0 15px 0;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /*flex-direction: column-reverse;*/
+    }
+
+    .login {
+        width:190px;
+    }
+
+
+    .login input {
+        width: 100%;
+        height: 30px;
+        text-align:center;
+        margin-bottom: 2px;
+        background: rgba(0,125,182,0.3);
+        border: none;
+        outline: none;
+        padding: 5px;
+        font-size: 16px;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        border: 1px solid rgba(0,87,127,0.2);
+        border-radius: 4px;
+        box-shadow: inset 0 -5px 45px rgba(100,100,100,0.1), 0 1px 1px rgba(255,255,255,0.1);
+        -webkit-transition: box-shadow .5s ease;
+        -moz-transition: box-shadow .5s ease;
+        -o-transition: box-shadow .5s ease;
+        -ms-transition: box-shadow .5s ease;
+        transition: box-shadow .5s ease;
+
+    }
+
+    #login-btn {
+      font-size: 13px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-bottom: 4px;
+}
+
+    .login input:focus {
+        box-shadow: inset 0 -5px 45px rgba(100,100,100,0.5), 0 1px 1px rgba(255,255,255,0.2);
+    }
+
+        ::-webkit-input-placeholder {color:#FFF; text-align: center}
+        ::-moz-placeholder          {color:#FFF; text-align: center}/* Firefox 19+ */
+        :-moz-placeholder           {color:#FFF; text-align: center}/* Firefox 18- */
+        :-ms-input-placeholder      {color:#FFF; text-align: center}
+
+
+    .baner_block {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .baner_logo {
+        width: 180px;
+    }
+
+    .medcent_string {
+        font-size: 16.8px;
+        color: #007db6;
+        text-align: right;
+    }
+
+    .studio_string {
+        font-size: 23px;
+        color: #007db6;
+        text-align: right;
+    }
+
+    .lk_string {
+        font-size: 12px;
+        margin-bottom: 5px;
+        color: #007db6;
+        position: relative;
+    }
+
+    .main_group_img {
+    max-height: 85px;
+}
+
+.main_group_title {
+     font-size: 7px;
+}
+
+    .one_half{
+        width:355px
+    }
+
+    .one_third{
+        width:230px
+    }
+
+    .two_thirds{
+        width:480px
+    }
+
+    .one_fourth{
+        width:167px
+    }
+
+    .three_fourths{
+        width:540px
+    }
+
+    .one_half .one_fourth{
+        width:150px
+    }
+
+
+
+    #page_footer p{
+        float:none;
+        display:block
+    }
+}
+
+@media screen and (max-width: 760px){
+    .row{
+        width:430px;
+        margin:0 auto;
+        padding:5px 0 5px 0
+    }
+
+    .row_baner{
+    width:430px;
+    text-align: center;
+    margin:0 auto;
+    padding:15px 0 15px 0;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /*flex-direction: column-reverse;*/
+}
+
+    .login {
+        width:135px;
+    }
+
+
+    .login input {
+        width: 100%;
+        height: 25px;
+        text-align:center;
+        margin-bottom: 2px;
+        background: rgba(0,125,182,0.3);
+        border: none;
+        outline: none;
+        padding: 5px;
+        font-size: 13px;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        border: 1px solid rgba(0,87,127,0.2);
+        border-radius: 4px;
+        box-shadow: inset 0 -5px 45px rgba(100,100,100,0.1), 0 1px 1px rgba(255,255,255,0.1);
+        -webkit-transition: box-shadow .5s ease;
+        -moz-transition: box-shadow .5s ease;
+        -o-transition: box-shadow .5s ease;
+        -ms-transition: box-shadow .5s ease;
+        transition: box-shadow .5s ease;
+
+    }
+
+    #login-btn {
+      font-size: 12px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 10px;
+}
+
+    .login input:focus {
+        box-shadow: inset 0 -5px 45px rgba(100,100,100,0.5), 0 1px 1px rgba(255,255,255,0.2);
+    }
+
+        ::-webkit-input-placeholder {color:#FFF; text-align: center}
+        ::-moz-placeholder          {color:#FFF; text-align: center}/* Firefox 19+ */
+        :-moz-placeholder           {color:#FFF; text-align: center}/* Firefox 18- */
+        :-ms-input-placeholder      {color:#FFF; text-align: center}
+
+
+    .baner_block {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .baner_logo {
+        width: 135px;
+    }
+
+    .medcent_string {
+        font-size: 11px;
+        color: #007db6;
+        text-align: right;
+    }
+
+    .studio_string {
+        font-size: 15px;
+        color: #007db6;
+        text-align: right;
+    }
+
+    .lk_string {
+        font-size: 10px;
+        margin-bottom: 5px;
+        color: #007db6;
+        position: relative;
+    }
+
+        .breadcrumb {
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .group_items_btn {
+        width: 430px;
+        margin-bottom: -15px;
+        font-size: 17px;
+    }
+
+    .dropdown-menu {
+        font-size: 13px;
+    width: 100%;
+    margin: 25px 0 0;
+    }
+
+
+    .nav_call_number {
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    }
+
+
+
+    /*Изменяем вывод категорий на странице услуг в зависимости от разрешения*/
+
+    .group_items_lg_button {
+        visibility: hidden;
+        display: none;
+    }
+
+    .group_items_sm_button {
+        visibility: visible;
+        display: unset;
+    }
+
+        .main_group_img {
+    max-height: 67px;
+}
+
+.main_group_title {
+     font-size: 6px;
+}
+
+.one_half, .one_third, .two_thirds, .one_fourth, .three_fourths, .one_half .one_fourth{
+    width:430px
+}
+
+
+h2.section_title, h2.section_title span{
+    background:none;
+    text-align:left;
+    padding-left:0!important;
+    padding-right:0!important
+}
+
+
+
+    #page_footer p{
+        float:none;
+        display:block
+    }
+
+}
+
+
+
+@media screen and (max-width: 460px){
+
+    .navbar-toggler {
+        font-size: 16px;
+    }
+
+    .nav_call_number {
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+
+
+    .row{
+        width:285px;
+        margin:0 auto;
+        padding:5px 0 5px 0
+    }
+
+    .row_baner{
+    width:285px;
+    text-align: center;
+    margin:0 auto;
+    padding:10px 0 10px 0;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+    #banner{
+    background: #2C2E2D url('/media/head_background.png') no-repeat local center top;
+    background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    color:#fff;
+    padding:0 0 0 0}
+
+        .login {
+        width: 180px;
+    }
+
+        .login form {
+            display: inline-flex;
+        }
+
+
+
+    .login input {
+        width: 100%;
+        height: 25px;
+        text-align:center;
+        margin-bottom: 1px;
+        background: rgba(0,125,182,0.3);
+        border: none;
+        outline: none;
+        padding: 5px;
+        font-size: 11px;
+        color: #fff;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        border: 1px solid rgba(0,87,127,0.2);
+        border-radius: 4px 0px 0px 4px;
+        box-shadow: inset 0 -5px 45px rgba(100,100,100,0.1), 0 1px 1px rgba(255,255,255,0.1);
+        -webkit-transition: box-shadow .5s ease;
+        -moz-transition: box-shadow .5s ease;
+        -o-transition: box-shadow .5s ease;
+        -ms-transition: box-shadow .5s ease;
+        transition: box-shadow .5s ease;
+
+    }
+
+    #login-btn {
+    width: 60px;
+    height: 25px;
+    border-radius: 0px 4px 4px 0px;
+
+      font-size: 10px;
+    padding-top: 0px;
+    padding-bottom: 1px;
+        margin-bottom: 0px;
+}
+
+    .login input:focus {
+        box-shadow: inset 0 -5px 45px rgba(100,100,100,0.5), 0 1px 1px rgba(255,255,255,0.2);
+    }
+
+        ::-webkit-input-placeholder {color:#FFF; text-align: center}
+        ::-moz-placeholder          {color:#FFF; text-align: center}/* Firefox 19+ */
+        :-moz-placeholder           {color:#FFF; text-align: center}/* Firefox 18- */
+        :-ms-input-placeholder      {color:#FFF; text-align: center}
+
+
+    .baner_block {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .baner_logo {
+        width: 110px;
+            margin-top: 5px;
+    margin-bottom: 5px;
+    }
+
+    .medcent_string {
+        font-size: 9px;
+    color: #007db6;
+    text-align: center;
+    }
+
+    .studio_string {
+           font-size: 12.5px;
+    color: #007db6;
+    text-align: center;
+    }
+
+    .lk_string {
+        font-size: 7px;
+        margin-bottom: 2px;
+        color: #007db6;
+        position: relative;
+    }
+
+    .breadcrumb {
+        margin-bottom: 4px;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+
+    .group_items_btn {
+        width: 285px;
+        margin-bottom: -15px;
+        font-size: 15px;
+    }
+
+        .dropdown-menu {
+        font-size: 13px;
+    width: 100%;
+    margin: 25px 0 0;
+    }
+
+
+
+/*Изменяем вывод категорий на главной странице в зависимости от разрешения*/
+
+    .group_items_lg {
+        visibility: hidden;
+        display: none;
+    }
+
+    .group_items_sm {
+        visibility: visible;
+        display: unset;
+    }
+
+        /*Изменяем вывод категорий на странице услуг в зависимости от разрешения*/
+
+    .group_items_lg_button {
+        visibility: hidden;
+        display: none;
+    }
+
+    .group_items_sm_button {
+        visibility: visible;
+        display: unset;
+    }
+
+    .table_resize_width{
+        width: 285px;
+    }
+
+
+
+
+
+            .main_group_img {
+    max-height: 50px;
+}
+
+.main_group_title {
+     font-size: 4px;}
+
+    .one_half, .one_third, .two_thirds, .one_fourth, .three_fourths, .one_half .one_fourth{
+        width:285px
+    }
+
+    #header_region{
+        padding-bottom:10px
+    }
+
+    #logo h2{
+        display:block
+    }
+
+    #banner .two_thirds,#shelf.one_half{
+        margin:0;
+        padding-right:0
+    }
+
+
+
+    #page_footer p{
+        float:none;
+        display:block
+    }
+
+}

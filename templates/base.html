@@ -1,0 +1,249 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'style/my_style.css' %}" media="all" />
+        <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}" media="all" />
+        <meta charset="utf-8">
+
+        <!--Page Title-->
+        <title>{% block title %}{% endblock %}</title>
+
+        <!--Device Width Check-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+        <!--Meta Keywords and Description-->
+        <meta name="description" content="{% block meta %}{% endblock %}">
+
+        <!--Favicon-->
+        <!--<link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />-->
+
+        <!--Fixes for Internet Explorer CSS3 and HTML5-->
+        <!--[if gte IE 9]>
+        <style type="text/css">
+            .gradient { filter: none!important;}
+
+        </style>
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+        <script>
+          'article aside footer header nav section time'.replace(/\w+/g,function(n){document.createElement(n)})
+        </script>
+        <![endif]-->
+
+        <!--Main CSS-->
+
+
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/css/style_ie8.css" media="screen, projection">
+        <![endif]-->
+
+        <!--Icon Fonts-->
+
+
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/css/font-awesome-ie7.min.css">
+        <![endif]-->
+
+        <!--Google Webfonts-->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300,600|Bree+Serif' rel='stylesheet' type='text/css'>
+
+        <!-- Custom Style from Adrian -->
+        <style type="text/css">
+        div.row h3{color: #797979 !important;}
+
+{#            <style class="cp-pen-styles">@import url(https://fonts.googleapis.com/css?family=Open+Sans);#}
+{#.btn { display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; }#}
+{#.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { background-color: #e6e6e6; }#}
+{#.btn-large { padding: 9px 14px; font-size: 15px; line-height: normal; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }#}
+{#.btn:hover { color: #333333; text-decoration: none; background-color: #e6e6e6; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -ms-transition: background-position 0.1s linear; -o-transition: background-position 0.1s linear; transition: background-position 0.1s linear; }#}
+{#.btn-primary, .btn-primary:hover { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); color: #ffffff; }#}
+{#.btn-primary.active { color: rgba(255, 255, 255, 0.75); }#}
+{#.btn-primary { background-color: #4a77d4; background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); background-image: linear-gradient(top, #6eb6de, #4a77d4); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  border: 1px solid #3762bc; text-shadow: 1px 1px 1px rgba(0,0,0,0.4); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); }#}
+{#.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #4a77d4; }#}
+{#.btn-block { width: 100%; display:block; }#}
+{##}
+{#* { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }#}
+{##}
+{#html { width: 100%; height:100%; overflow:hidden; }#}
+
+
+
+
+</style>
+
+
+
+
+    </head>
+<body>
+<!--Start of NavBar-->
+<nav style="background: #2C2E2D url('/media/nav_background.png') no-repeat local center top; background-size:cover;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(76,89,97,1);
+-moz-box-shadow: 0px 0px 10px 1px rgba(76,89,97,1);
+box-shadow: 0px 0px 10px 1px rgba(76,89,97,1);
+" class="navbar  navbar-light">
+    <div style="position: relative"  class="row">
+        <h2 class="nav_call_number">8 (966) 143-03-03</h2>
+
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                &#9776;
+                 </button>
+
+
+
+
+
+        <div class="collapse" id="exCollapsingNavbar">
+             <div class="nav_style">
+
+                <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Главная</a>
+                </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="/services/">Услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employees/">Медицинский персонал</a>
+                </li>
+{#                    <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">Пациентам</a>#}
+{#                </li>#}
+{#                    <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">Заболевания</a>#}
+{#                </li>#}
+{#                    <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">Симптомы</a>#}
+{#                </li>#}
+{#                    <li class="nav-item">#}
+{#                    <a class="nav-link" href="/analyzes/">Анализы</a>#}
+{#                </li>#}
+{#                    <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">Медикаменты</a>#}
+{#                </li>#}
+{#                    <li class="nav-item">#}
+{#                    <a class="nav-link" href="#">Вакансии</a>#}
+{#                </li>#}
+            </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--End of NavBar-->
+
+    <!--Start of Product Banner-->
+    <section id="banner" role="banner">
+        <div class="row_baner">
+
+{#        <!--Start of Product Banner Description-->#}
+
+        <div class="baner_block">
+
+{#            <div class="lic_string_wrapper">#}
+{#            <h1 class="lic_string">Лицензия: ЛО-50-01-008446</h1>#}
+{#            </div>#}
+
+
+ <h1 class="medcent_string">МЕДИЦИНСКИЙ ЦЕНТР</h1>
+             <h1 class="studio_string">СТУДИЯ ДОКТОР</h1>
+
+
+        </div>
+
+
+
+        <div class="baner_block">
+
+            <img class="baner_logo" src="{% static "image/logo.png" %}" alt="Студия Доктор">
+
+        </div>
+
+{#                  <div class="baner_block">#}
+{#<h1 class="lk_string">ЛИЧНЫЙ КАБИНЕТ</h1>#}
+{#            <div class="login">#}
+{#    <form>#}
+{#    	<input id="tel" type="text" name="tel" maxlength="18" placeholder="Номер мобильного" required="required" onkeyup="formattingNumbers( this )" />#}
+{#        <input type="password" name="p" placeholder="Password" required="required" />#}
+{#        <button id="login-btn" type="submit" class="btn btn-info btn-block btn-sm">Войти</button>#}
+{#    </form>#}
+{#</div>#}
+{##}
+{##}
+{##}
+{##}
+{#        </div>#}
+        <!--End of Product Banner Description-->
+
+
+        </div>
+    </section>
+    <!--End of Product Banner-->
+
+
+    <!--Start of Main Content-->
+{% block content %}{% endblock %}
+
+    <!--End of Main Content-->
+
+<!--Start of Landing Page Footer-->
+<footer role="contentinfo">
+<div id="page_footer">
+    <div class="row">
+<p style="float:left">
+Не является офертой
+</p>
+
+<p style="float:right">
+Группа компаний "Студия" &copy; {% now 'Y' %}
+</p>
+        </div>
+</div>
+</footer>
+<!--End of Landing Page Footer-->
+
+    <!-- Included JS Files (Compressed) -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+{#    Работа  с телефонным номером в логин форме#}
+    <script>
+    $(document).ready(function(){
+        $("#tel").click(function(){
+            if( !$(this).val() ) {
+               $("input:text").val("+7 ");
+            }
+        });
+    });
+    function formattingNumbers( elem ) {
+        var num = elem.value.replace( /\D/g, '' ).split( /(?=.)/ ), i = num.length - 1;
+        if ( 0 <= i ) num.unshift( '+' );
+        if ( 1 <= i ) num.splice( 2, 0, ' (' );
+        if ( 4 <= i ) num.splice( 6, 0, ') ' );
+        if ( 7 <= i ) num.splice( 10, 0, '-' );
+        if ( 9 <= i ) num.splice( 13, 0, '-' );
+        elem.value = num.join( '' );
+    }
+    </script>
+
+f
+{##}
+{#<script async src="https://widget.calltovisit.com/widget.js?config=f977c62e80b6c02065b6a6545874de60"></script>#}
+{#    <script>#}
+{#      window.ctvsData = window.ctvsData || [];#}
+{#      function ctvs(){ctvsData.push(arguments)};#}
+{#      ctvs('config', 'f977c62e80b6c02065b6a6545874de60');#}
+{#    </script>#}
+
+    </body>
+</html>

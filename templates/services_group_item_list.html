@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+
+{% block title %}{{ group.name }}{% endblock %}
+
+{% block content %}
+<!--Start of Main Content-->
+    <article role="main">
+    <div id="main_content">
+
+
+        <!--Start categoryzed table -->
+        <section class="background_white">
+        <div class="row">
+
+
+                   <nav class="breadcrumb">
+              <a class="breadcrumb-item" href="/">Главная</a>
+              <a class="breadcrumb-item" href="/services/">Услуги</a>
+
+              <span class="breadcrumb-item active">{{ group.name }}</span>
+
+            </nav>
+
+
+            <div class="one_third">
+            <!-- Single button -->
+                <div class="btn-group group_items_sm_button">
+                  <button type="button" class="btn btn-info dropdown-toggle group_items_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ group.name }}
+                  </button>
+                  <div class="dropdown-menu">
+                      {% for group in groups %}
+                    <a class="dropdown-item" href="/services/{{ group.id }}">{{ group.name }}</a>
+                {#    <div class="dropdown-divider"></div>#}
+                {#    <a class="dropdown-item" href="#">Separated link</a>#}
+                      {% endfor %}
+                  </div>
+                </div>
+            <!-- Single button -->
+
+                <div class="group_items_lg_button">
+                {% for group in groups %}
+                    {% if group.is_active %}
+                        <a href="/services/{{ group.id }}" class="list-group-item {% ifequal group.id|stringformat:"s" active_group|stringformat:"s" %}active{% endifequal %}">{{ group.name }}</a>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+
+
+        <div class="two_thirds last">
+        <a name="content"></a>
+                                {% if group.group_description %}
+                        <div class="alert alert-info" role="alert">
+                          {{ group.group_description }}
+                        </div>
+                    {% endif %}
+             <table class="table table-hover table_resize_width">
+
+          <thead>
+            <tr>
+              <th>Название</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+
+ {% for item in items_add_to_cat %}
+     {% ifequal group.pk item.add_to_group %}
+
+
+         <tr>
+              <td>
+                  {% if item.description %}
+                    <a href="/services/{{ item.group.pk }}/{{ item.pk }}/#content">{{ item.name }}</a>
+                  {% endif %}
+                  {% if not item.description %}
+                    {{ item.name }}
+                  {% endif %}
+
+                    {% if item.service_time %}
+                        <span class="badge badge-info">{{ item.service_time }} мин</span>
+                    {% endif %}
+                    {% if item.manufacturer_country %}
+                        <span class="badge badge-primary">{{ item.manufacturer_country }}</span>
+                    {% endif %}
+                    {% if item.to_order %}
+                        <span class="badge badge-danger">под заказ</span>
+                    {% endif %}
+
+
+              </td>
+              <td style="width: 120px">
+                  {{ item.price_from }}
+                  {% if item.price_to %}
+                      - {{ item.price_to }}
+                  {% endif %}
+                  <span class="badge badge-pill badge-default">руб</span>
+              </td>
+            </tr>
+{% endifequal %}
+ {% endfor %}
+
+ {% for item in items %}
+            <tr>
+              <td>
+                  {% if item.description %}
+                    <a href="/services/{{ item.group.pk }}/{{ item.pk }}/#content">{{ item.name }}</a>
+                  {% endif %}
+                  {% if not item.description %}
+                    {{ item.name }}
+                  {% endif %}
+
+                    {% if item.service_time %}
+                        <span class="badge badge-info">{{ item.service_time }} мин</span>
+                    {% endif %}
+                    {% if item.manufacturer_country %}
+                        <span class="badge badge-primary">{{ item.manufacturer_country }}</span>
+                    {% endif %}
+                    {% if item.to_order %}
+                        <span class="badge badge-danger">под заказ</span>
+                    {% endif %}
+
+
+              </td>
+              <td style="width: 120px">
+                  {{ item.price_from }}
+                  {% if item.price_to %}
+                      - {{ item.price_to }}
+                  {% endif %}
+                  <span class="badge badge-pill badge-default">руб</span>
+              </td>
+            </tr>
+             {% endfor %}
+             </tbody>
+        </table>
+
+
+
+        </div>
+        </div>
+
+        </section>
+        <!-- End categoryzed table-->
+
+    </div>
+    </article>
+    <!--End of Main Content-->
+{% endblock %}
+

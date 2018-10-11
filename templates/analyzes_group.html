@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}
+    {{ group.group_title }}
+{% endblock %}
+{% block content %}
+    <!--Start of Main Content-->
+    <article role="main">
+        <div id="main_content">
+            <!--Start categoryzed table -->
+            <section class="background_white">
+                <div class="row">
+                    <nav class="breadcrumb">
+                        <a class="breadcrumb-item" href="/">
+                            Главная
+                        </a>
+
+                        <a class="breadcrumb-item" href="/analyzes/">
+                            Анализы
+                            <span class="badge badge-info">
+                                Invitro
+                            </span>
+                        </a>
+                        <a class="breadcrumb-item" href="/analyzes/{% for x in profile %}{{ x.slug_id }}{% endfor %}/#content">
+                            {% for x in profile %}
+                                {{ x.profile_title }}
+                            {% endfor %}
+                        </a>
+                        <span class="breadcrumb-item active">
+                            {% for x in groups %}
+                                {{ x.group_title }}
+                            {% endfor %}
+                        </span>
+                    </nav>
+                    <div class="one_third">
+                        {% for profile in profiles %}
+                            <a href="/analyzes/{{ profile.slug_id }}#content" class="list-group-item">
+                                {{ profile.profile_title }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                    <div class="two_thirds last">
+                        <a name="content"></a>
+                        {% for group in groups %}
+                            <h2 class="section_title" style="font-size: 37px; font-weight: bold; background-image: none;">
+                                {{ group.group_title }}
+                            </h2>
+                            <br>
+                            <table class="table table-hover ">
+                                <thead>
+                                    <tr>
+                                        <th>Код</th>
+                                        <th>Название</th>
+                                        <th>Цена</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for item in items %}
+                                        <tr>
+                                            <td>
+                                                <span class="badge badge-pill badge-primary">
+                                                    {{ item.code }}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <a href="/analyzes/{{ group.profile.slug_id }}/{{ group.slug_id }}/{{ item.slug_id }}/#content">
+                                                    {{ item.analysis_name }}
+                                                </a>
+                                            </td>
+                                            <td style="width: 90px">
+                                                {{ item.price }}
+                                                <span class="badge badge-pill badge-default">
+                                                    руб
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <!-- End categoryzed table-->
+        </div>
+    </article>
+    <!--End of Main Content-->
+{% endblock %}
+

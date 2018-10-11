@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+{% block content %}
+<!--Start of Main Content-->
+    <article role="main">
+    <div id="main_content">
+
+
+
+        <!--Start categoryzed table -->
+        <section class="background_white">
+        <div class="row">
+
+
+            <nav class="breadcrumb">
+              <a class="breadcrumb-item" href="/">Главная</a>
+              <a class="breadcrumb-item" href="/services/">Услуги</a>
+              {% if not item.group.is_main %}
+                  <a class="breadcrumb-item" href="/services/{{ item.group.id }}">{{ item.group.name }}</a>
+                  <span class="breadcrumb-item active">{{ item.name }}</span>
+              {% endif %}
+              {% if item.group.is_main %}
+                  <span class="breadcrumb-item active">{{ item.name }}</span>
+              {% endif %}
+
+            </nav>
+
+            <div class="one_third">
+            <!-- Single button -->
+                <div class="btn-group group_items_sm_button">
+                  <button type="button" class="btn btn-info dropdown-toggle group_items_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{ group.name }}
+                  </button>
+                  <div class="dropdown-menu">
+                      {% for group in groups %}
+                    <a class="dropdown-item" href="/services/{{ group.id }}">{{ group.name }}</a>
+                {#    <div class="dropdown-divider"></div>#}
+                {#    <a class="dropdown-item" href="#">Separated link</a>#}
+                      {% endfor %}
+                  </div>
+                </div>
+            <!-- Single button -->
+
+                <div class="group_items_lg_button">
+                {% for group in groups %}
+                    {% if group.is_active %}
+                        <a href="/services/{{ group.pk }}" class="list-group-item {% ifequal group.id|stringformat:"s" active_group|stringformat:"s" %}active{% endifequal %}">{{ group.name }}</a>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
+
+
+        <div class="two_thirds last">
+            <h2 class="section_title" style="font-size: 37px; font-weight: bold; background-image: none;">
+                {{ item.name }}
+            </h2>
+
+            <br><br>
+
+            {{ item.description }}
+
+            <br><br>
+
+            {% if item.service_time or item.manufacturer_country or item.to_order %}
+
+                    Дополнительная информация:
+                    {% if item.service_time %}
+                        <span class="badge badge-info">{{ item.service_time }} мин</span>
+                    {% endif %}
+                    {% if item.manufacturer_country %}
+                        <span class="badge badge-primary">{{ item.manufacturer_country }}</span>
+                    {% endif %}
+                    {% if item.to_order %}
+                        <span class="badge badge-danger">под заказ</span>
+                    {% endif %}
+
+            {% endif %}
+
+            <div style="padding: 0 5% 0 5%">
+            {% autoescape off %}
+            {% for x in items %}{{ x.description }}{% endfor %}
+            {% endautoescape %}
+            </div>
+
+
+        </div>
+
+        </div>
+        </section>
+        <!-- End categoryzed table-->
+
+    </div>
+    </article>
+    <!--End of Main Content-->
+{% endblock %}
+

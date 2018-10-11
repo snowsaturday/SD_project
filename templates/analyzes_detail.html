@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}
+    {% for x in items %}
+        {{ x.analysis_name }}
+    {% endfor %}
+{% endblock %}
+{% block content %}
+    <!--Start of Main Content-->
+    <article role="main">
+        <div id="main_content">
+        <!--Start categoryzed table -->
+        <section class="background_white">
+            <div class="row">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="/">
+                        Главная
+                    </a>
+                    <a class="breadcrumb-item" href="/analyzes/">
+                        Анализы
+                        <span class="badge badge-info">
+                            Invitro
+                        </span>
+                    </a>
+                    <a class="breadcrumb-item" href="/analyzes/{% for x in profile %}{{ x.slug_id }}{% endfor %}/#content">
+                        {% for x in profile %}
+                            {{ x.profile_title }}
+                        {% endfor %}
+                    </a>
+                    <a class="breadcrumb-item" href="/analyzes/{% for x in profile %}{{ x.slug_id }}{% endfor %}/{% for x in groups %}{{ x.slug_id}}{% endfor %}/#content">
+                        {% for x in groups %}
+                            {{ x.group_title }}
+                        {% endfor %}
+                    </a>
+                    <span class="breadcrumb-item active">
+                        {% for x in items %}
+                            {{ x.analysis_name }}
+                        {% endfor %}
+                    </span>
+                </nav>
+                <div class="one_third">
+                    {% for profile in profiles %}
+                        <a href="/analyzes/{{ profile.slug_id }}#content" class="list-group-item">
+                            {{ profile.profile_title }}
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="two_thirds last">
+                    <a name="content"></a>
+                    <h2 class="section_title" style="font-size: 37px; font-weight: bold; background-image: none;">
+                        {% for x in items %}{{ x.analysis_name }}{% endfor %}
+                    </h2>
+                    <br>
+                    <div style="padding: 0 5% 0 5%"
+                        {% autoescape off %}
+                            {% for x in items %}
+                                {{ x.description }}
+                            {% endfor %}
+                        {% endautoescape %}
+                </div>
+            </div>
+        </section>
+        <!-- End categoryzed table-->
+        </div>
+    </article>
+    <!--End of Main Content-->
+{% endblock %}
+

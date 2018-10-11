@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+    <!--Start of Main Content-->
+
+
+
+
+    <article role="main">
+        <div id="main_content">
+            <section class="background_white">
+            <div class="group_items_lg">
+                <div class="row">
+                    <div class="text-center">
+                    {% for group in groups %}
+                        {% if group.icon %}
+                            <div style="display:inline-block">
+
+                                <a href="/services/{{ group.id }}">
+                                    <img class="main_group_img" src="/media/{{ group.icon }}" alt="{{ group.name }}">
+                                    {% autoescape off %}
+                                        <p class="main_group_title">{{ group.specialist_name }}</p>
+                                    {% endautoescape %}
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+                <div class="group_items_sm">
+                <div class="row">
+                    {% for group in groups %}
+                        {% if group.icon %}
+                            <div style="text-align: center;">
+                            <a href="/services/{{ group.id }}">
+                                    <button style="width: 100%; margin-bottom: 2px; font-size: 10px;" type="button" class="btn btn-outline-primary">
+                                        {{ group.specialist_name|striptags }}
+
+                                    </button>
+                                    </a>
+
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                </div>
+
+
+
+            </section>
+            <section class="background_grey">
+                {% for contact in contacts %}
+                    <div class="row">
+                        <h2 class="section_title" style="font-size: 25px; background-image: none; text-align: center">
+                        Как нас найти:
+                        </h2>
+                        <div class="row">
+                            {% autoescape off %}
+                            {{ contact.map }}
+                            {% endautoescape %}
+                        </div>
+                        <br>
+                        <div style="text-align: center;">
+                            <div class="one_third">
+                                <strong>
+                                    {{ contact.name }} расположен по адресу:
+                                </strong>
+                                <br>
+                                {{ contact.address }}
+                            </div>
+                            <div class="one_third">
+                                <strong>
+                                    График работы:
+                                </strong>
+                                <br>
+                                Ежедневно с 9:00 до 20:00
+                            </div>
+                            <div class="one_third last">
+                                <strong>
+                                Телефон для записи:
+                                </strong>
+                                <br>
+                                {{ contact.phone_number }}
+                                <br>
+                                {{ contact.phone_number_additional_1 }}
+                                <br>
+                                {{ contact.phone_number_additional_2 }}
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                {% endfor %}
+            </section>
+            <section class="background_white">
+                <div class="row">
+                    <h2 class="section_title" style="font-size: 25px; background-image: none; text-align: center">
+                    Наши лицензии:
+                    </h2>
+                    <div class="text-center">
+                        {% for license in licenses %}
+                            <div style="display:inline">
+                                <a href="/media/{{ license.license }}">
+                                <img style="height: 160px;" src="/media/{{ license.license }}" class="rounded" alt="{{ license.name }}">
+                                </a>
+                            </div>
+                        {% endfor %}
+                        <br>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </article>
+    <!--End of Main Content-->
+{% endblock %}
+

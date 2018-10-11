@@ -1,0 +1,572 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://www.pyimagesearch.com/wp-content/cache/minify/3b0ed.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/../static/my_style.css" media="all" />
+
+
+
+    <meta charset="utf-8">
+    <!--Page Title-->
+    <title>PyImageSearch Gurus: Computer Vision and OpenCV Course</title>
+
+    <!--Device Width Check-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+    <!--Meta Keywords and Description-->
+    <meta name="description" content="PyImageSearch Gurus is a computer vision + OpenCV course that is guaranteed to make you awesome at solving real-world computer vision problems.">
+
+    <!--Favicon-->
+    <!--<link rel="shortcut icon" href="images/favicon.ico" title="Favicon" />-->
+
+    <!--Fixes for Internet Explorer CSS3 and HTML5-->
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient { filter: none!important;}
+
+    </style>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script>
+      'article aside footer header nav section time'.replace(/\w+/g,function(n){document.createElement(n)})
+    </script>
+    <![endif]-->
+
+    <!--Main CSS-->
+
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" href="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/css/style_ie8.css" media="screen, projection">
+    <![endif]-->
+
+    <!--Icon Fonts-->
+
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/css/font-awesome-ie7.min.css">
+    <![endif]-->
+
+    <!--Google Webfonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300,600|Bree+Serif' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Style from Adrian -->
+    <style type="text/css">
+    div.row h3{color: #797979 !important;}
+    </style>
+
+
+    <!-- Optimizely -->
+    <script src="https://cdn.optimizely.com/js/2173410313.js"></script>
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+    mixpanel.init("2486e0f021e92605d44d32fce5f1d826");
+    </script>
+    <link rel="stylesheet" href="../assets/style/my_style.css">
+    <!-- end Mixpanel -->
+</head>
+<body>
+
+
+<!--Start of Product Banner-->
+<section id="banner" role="banner">
+<div class="row" style="padding-top: 25px; padding-bottom: 25px;">
+
+<!--Start of Product Banner Description-->
+<div style="text-align: center;">
+<!--Start of Banner Title-->
+<h1 style="font-size: 4.0em;">You can become a computer vision + OpenCV Guru.</h1>
+<!--End of Banner Title-->
+
+<p style="font-size: 24px;">PyImageSearch Gurus is a <strong><em>course</em></strong> and <strong><em>community</em></strong> designed to take you from computer vision <em>beginner</em> to <em>expert</em>. <strong>Guaranteed.</strong></p>
+
+<!--Start of Buy Button-->
+<div class="button_buy" style="padding-top: 10px;">
+<a id="top_buy_btn" href="#" class="manual-optin-trigger" data-optin-slug="kizfm1tpclo79dji" title="Learn more about PyImageSearch Gurus" style="font-size: 20px;"><span class="button_price">Give it a try!</span> <span class="button_text">Grab your (free) course syllabus PDF + 10 sample lessons.</span></a>
+<p style="font-size: 14px;"><em>"This course is the best investment in time and money that I've made in a long time." &mdash; Skip Snaith</em></p>
+</div>
+<!--End of Buy Button-->
+
+</div>
+<!--End of Product Banner Description-->
+
+
+</div>
+</section>
+<!--End of Product Banner-->
+
+
+<!--Start of Main Content-->
+<article role="main">
+<div id="main_content">
+
+<section id="featured_in" class="background_grey">
+<div class="row" style="padding-top: 15px; padding-bottom: 15px;">
+	<img src="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/images/credibility_logos.png" style="width: 100%;" alt="PyImageSearch Gurus has been featured on OpenCV.org, LifeHacker, Kickstarter, and more."/>
+</div>
+</section>
+
+<div class="row" style="padding-top: 25px; padding-bottom: 0px;">
+<h2 class="section_title" style="font-size: 37px; font-weight: bold; background-image: none;">
+	<span style="font-weight: normal;">Learning computer vision &amp; OpenCV used to be <strong><em>hard.</em></strong></span><br/>
+	But not anymore.
+</h2>
+
+<script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:62.5% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_1fl655yx59 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+</div>
+
+<!-- Start Take a Look -->
+<section class="background_white">
+<div class="row">
+
+<div class="one_half">
+<img src="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/images/pyimagesearch_gurus_overview.jpg" alt="PyImageSearch Gurus: dedicated to making developers, researchers, and students awesome at solving real-world computer vision problems" width="436" />
+</div>
+
+<div class="one_half last">
+<h2>PyImageSearch Gurus has one goal...</h2>
+<h3>...to make <strong><em>developers</em></strong>, <strong><em>researchers</em></strong>, and <strong><em>students</em></strong> like yourself become <strong><em>awesome</em></strong> at solving real-world computer vision problems.</h3>
+
+<p>Inside <strong>PyImageSearch Gurus</strong>, you'll find:</p>
+<ul style="margin-left: 20px;">
+	<li style="padding-bottom: 10px;"><strong>An actionable, real-world course on OpenCV and computer vision.</strong> Each lesson in PyImageSearch Gurus is taught in the same trademark, hands-on, easy-to-understand PyImageSearch style that you know and love. We'll be using primarily Python + OpenCV throughout the course, but expect a few other libraries to be utilized as well, including scikit-learn, scikit-image, Caffe, and Keras.</li>
+	<li style="padding-bottom: 10px;"><strong>The most <em>comprehensive</em> computer vision education online today</strong>. The PyImageSearch Gurus course covers <strong>13 modules</strong> broken out into <strong>168 lessons</strong>, with other <strong>2,161 pages</strong> of content. You won't find a more detailed computer vision course anywhere else online, I guarantee it. <em>See below for the full list of topics to be covered in the course.</em></li>
+	<li><strong>A community of like-minded developers, researchers, and students</strong> just like you, who are eager to learn computer vision and level-up their skills.</li>
+</ul>
+<p>Sound interesting? <strong><em>Keep reading to learn more...</em></strong></p>
+<p><a class="join_the_course" href="#"><strong>Sign me up</strong> &mdash; I'm ready to become a computer vision guru. &raquo;</a></p>
+</div>
+
+</div>
+</section>
+<!-- End Take a Look -->
+
+<!-- Start When you Join -->
+<section class="background_white">
+<div class="row">
+
+<div class="one_half">
+<h2>Computer vision is <em>everywhere</em>... <strong>whether you realize it or not.</strong></h2>
+<h3>Join <em>PyImageSearch Gurus</em> and uncover the algorithms powering <em>real-world</em> computer vision applications.</h3>
+
+<p>Have you been on Facebook recently? If so, you may have noticed that Facebook not only can <strong>automatically</strong> <em>detect</em> faces in images but also <em>recognize</em> and <em>tag</em> them as well!</p>
+<p>Just like Facebook has seamlessly inserted face recognition into their online photo software, we can also apply computer vision to other areas of our lives: including automatic license plate identification, handwriting recognition, security, surgery, military, retail, <em>and much more</em>.</p>
+<p>My goal in the PyImageSearch Gurus course is to teach you how to <em>utilize computer vision to solve actual, real-world problems</em>, such as the ones listed in the domains above. <strong>Join me, and give the course a try</strong> &mdash; before you know it, you'll be building (and solving) computer vision projects of your own!</p>
+<p><a class="join_the_course" href="#"><strong>Sign me up</strong> &mdash; I'm ready to become a computer vision guru. &raquo;</a></p>
+</div>
+
+<div class="one_half last">
+<img src="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/images/cv_everywhere_example.jpg" alt="Computer vision is everywhere, whether you realize it or not." width="420" />
+</div>
+
+</div>
+</section>
+<!-- End When you Join -->
+
+<!--Start categoryzed table -->
+<section class="background_white">
+<div class="row">
+
+<div class="one_half list-group">
+
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small>127 исследований</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+
+</div>
+
+<div class="one_half last">
+
+<table class="table table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+</div>
+</section>
+<!-- End categoryzed table-->
+
+<!-- Start TABLE -->
+<section class="background_grey">
+<div class="row" style="padding-top: 25px; padding-bottom: 25px;">
+
+<div class="one_halt">
+
+</div>
+    <div class="one_halt last">
+ <table class="table table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+
+</section>
+<!-- End TABLE -->
+
+<!-- Start ОТЗЫВЫ -->
+<section id="testimonials" class="background_grey">
+<div class="row" style="padding-top: 15px; padding-bottom: 20px;">
+
+<!-- Start of Testimonial-->
+<blockquote class="one_half">
+<q>Love the course structure and content. Makes computer vision concepts so easy that even someone without much prior knowledge can also become a guru.</q>
+<footer>
+<img src="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/images/naren_mudivarthy.jpg" alt="Naren Mudivarthy, Software Engineer at Cisco"/>
+<div>Naren Mudivarthy</div>
+<a target="blank" href="https://www.linkedin.com/pub/naren-mudivarthy/36/a21/283">Software Engineer at Cisco</a>
+</footer>
+</blockquote>
+<!--End of of Testimonial-->
+
+<!--Start of Testimonial-->
+<blockquote class="one_half last">
+<q>I cannot say it enough: PyImageSearch Gurus is amazing. I really enjoy myself and the way you set everything up (blog, course, community, incredible response time). It tells a lot about how much you enjoy it too.</q>
+<footer>
+<img src="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/images/claude_cavelius.jpg" height="60" width="60" alt="Claude Cavelius, Research geologist and earth modeler"/>
+<div>Claude Cavelius</div>
+<a target="blank" href="https://www.linkedin.com/in/claude-cavelius-9890523">Research geologist &amp; earth modeler</a>
+</footer>
+</blockquote>
+<!--End of of Testimonial-->
+
+</div>
+</section>
+<!--End of ОТЗЫВЫ-->
+
+<div id="ready_become" class="row" style="padding-top: 25px; padding-bottom: 20px;">
+<h2 class="section_title" style="font-size: 38px; font-weight: bold; background-image: none;">
+	<span style="font-weight: normal;">Ready to become a computer vision guru?</span><br/>
+	Just select your membership plan below...
+</h2>
+</div>
+
+<!--Start of Pricing-->
+<section id="pricing" class="background_grey" style="border-bottom: none;">
+<div class="row" style="padding-bottom: 15px;">
+
+<div id="pricing_table" style="padding-top: 0px;">
+<!--Begin Pricing Block-->
+<div class="pricing_block one_half">
+<div class="pricing_header">
+<h4>Apprentice Membership</h4>
+</div>
+<div class="pricing">
+<p class="price">$95</p>
+<p class="price_sub">Billed monthly</p>
+</div>
+<p style="padding-left: 20px; padding-right: 20px; text-align: left;">The <strong>Apprentice Membership</strong> is billed monthly. Every month a new set of lessons are released according to a preset schedule I have meticulously crafted to help you study computer vision in the <em>most efficient, optimal manner</em>. You can work through the course on your own time, independent from other students' progress. <strong>Under this membership, it will take you as little as 6 months to complete the PyImageSearch Gurus course.</strong></p>
+<p style="padding-left: 20px; padding-right: 20px; text-align: left;">If you're just testing the waters (or, if budget is an issue), I'd recommend going with the <strong>Apprentice Membership</strong>. You'll still be getting the <em>best, most comprehensive</em> computer vision education online &mdash; and you can always upgrade to an <em>instant access membership</em> once you've given the course a try.</p>
+<ul class="list_check" style="text-align: left;">
+<li style="padding-left: 30px; padding-right: 20px;">Admission to the PyImageSearch Gurus course.</li>
+<li style="padding-left: 30px; padding-right: 20px;"><strong>Preset course schedule:</strong> each month for 6 months (based on your signup date) a new set of lessons is released.</li>
+<li style="padding-left: 30px; padding-right: 20px;">Access to the <strong>private PyImageSearch Gurus Community + Forums</strong>.</li>
+<li style="padding-left: 30px; padding-right: 20px;"><strong>Access to PyImageSearch Jobs</strong> &mdash; land your next position in the computer vision field (coming soon).</li>
+<li class="last" style="padding-left: 30px; padding-right: 20px;">Embed your <em>Certificate of Completion</em> directly on your <strong>LinkedIn profile</strong>.</li>
+</ul>
+<a class="signup_link" href="https://gurus.pyimagesearch.com/register/pyimagesearch-gurus-apprentice-membership/" data-product="apprentice_membership_sp"><img src="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/images/i_want_this_plan_btn.png" alt="Join the PyImageSearch Gurus course" style="margin-top: 20px; width: 320px;"/></a>
+<p></p>
+</div>
+<!--End Pricing Block-->
+
+<!--Begin Pricing Block-->
+<div id="favorite" class="pricing_block one_half last">
+<div class="pricing_header">
+<h4>Instant Access Membership</h4>
+</div>
+<div class="pricing">
+<p class="price">$995</p>
+<p class="price_sub">One-time Payment &mdash; <strong><em>SAVE 15%!</em></strong></p>
+</div>
+<p style="padding-left: 20px; padding-right: 20px; text-align: left;">I've designed the <strong>Instant Access Membership</strong> to be your <em>all-access pass</em> to the PyImageSearch Gurus course for a single, upfront <strong><em>one-time payment</em></strong>. Inside this membership, you'll get <strong><em>instant access</em></strong> to <em>every single lesson</em> in PyImageSearch Gurus. This is the <strong><em>100%, entirely self-paced option</em></strong>, allowing you to work through the course at your own speed, <em>finish in less than 6 months</em>, and focus on the modules <em>that interest you the most</em>.</p>
+<p style="padding-left: 20px; padding-right: 20px; text-align: left;">70% of PyImageSearch Gurus members choose this option &mdash; and most members that initially go with the Apprentice Membership upgrade to instant access after they join. <strong>So why not start with the best?</strong></p>
+<p style="padding-left: 20px; padding-right: 20px; text-align: left;">When you <strong>purchase the Instant Access Membership</strong> you'll be getting:</p>
+<ul class="list_check" style="text-align: left;">
+<li style="padding-left: 30px; padding-right: 20px;">Admission to the PyImageSearch Gurus course.</li>
+<li style="padding-left: 30px; padding-right: 20px;"><strong>Instant access</strong> to <strong><em>every lesson</em></strong> in the PyImageSearch Gurus course for an upfront one-time payment.</li>
+<li style="padding-left: 30px; padding-right: 20px;"><strong>100% fully self-paced:</strong> work at your own speed, focus on the lessons that interest you the most.</li>
+<li style="padding-left: 30px; padding-right: 20px;"><strong>Accelerate your progress</strong> and finish the course <em>faster</em> than 6 months.</li>
+<li style="padding-left: 30px; padding-right: 20px;">Access to the <strong>private PyImageSearch Gurus Community + Forums</strong>.</li>
+<li style="padding-left: 30px; padding-right: 20px;"><strong>Access to PyImageSearch Jobs</strong> &mdash; land your next position in the computer vision field (coming soon).</li>
+<li style="padding-left: 30px; padding-right: 20px;">Embed your <em>Certificate of Completion</em> directly on your <strong>LinkedIn profile</strong>.</li>
+<li class="last" style="padding-left: 30px; padding-right: 20px;"><strong><em>SAVE 15%</em></strong> by going with the instant access membership.</li>
+</ul>
+<a class="signup_link" href="https://gurus.pyimagesearch.com/register/pyimagesearch-gurus-instant-access-membership-fcff7b5e/" data-product="instant_access_sp"><img src="https://www.pyimagesearch.com/static/templates/pyimagesearch-gurus/images/i_want_this_plan_btn.png" alt="Join the PyImageSearch Gurus course" style="margin-top: 20px; width: 320px;"/></a>
+</div>
+<!--End Pricing Block-->
+</div>
+<!--End of Pricing Table-->
+
+</div>
+</section>
+<!--End of Pricing-->
+
+<!--Start of Questions-->
+<section id="features">
+<div class="row" style="padding-bottom: 10px;">
+
+<!--Start of Questions Title-->
+<h2 class="section_title"><span>Questions?</span></h2>
+<!--End of Questions Title-->
+
+<!--Start of Questions List-->
+<ul>
+<li class="one_half">
+    <h4>Which membership should I buy?</h4>
+    <p>This mostly depends on your budget. The instant access membership costs more upfront, but you'll get access to <em>every lesson</em> inside the PyImageSearch Gurus course <em>immediately</em> &mdash; plus, you'll save <strong><em>15% in the long run.</em></strong> However, if budget is a concern (or if you want to try the course before committing to the instant access), then the monthly membership is still a great deal. In either case, <em>you're still getting the best, most comprehensive computer vision education online</em>.</p>
+</li>
+<li class="one_half last">
+    <h4>I'm just starting out. Is this course right for me?</h4>
+    <p><strong>Yes, absolutely.</strong> Let me put it this way &mdash; I built PyImageSearch Gurus to be the course <strong><em>I wish I had</em></strong> when I started learning computer vision. Even though computer vision concepts seem complicated, overlapping and intertwining, I've <em>unweaved all the complexity</em>, leaving you with an <em>easy-to-follow roadmap</em> to graduating the PyImageSearch Gurus course and becoming a computer vision guru.</p>
+</li>
+</ul>
+<!--End of Questions List-->
+
+</div>
+</section>
+<!--End of Questions-->
+
+</div>
+</article>
+<!--End of Main Content-->
+
+<!--Start of Landing Page Footer-->
+<footer role="contentinfo" class="background_grey">
+<div id="page_footer" class="row">
+<ul>
+<li><a href="http://www.pyimagesearch.com/">Home</a></li>
+<li><a href="http://www.pyimagesearch.com/about/">About</a></li>
+<li><a href="http://www.pyimagesearch.com/contact/">Contact</a></li>
+</ul>
+
+<p>
+&copy; 2017 PyImageSearch. All Rights Reserved.
+</p>
+</div>
+</footer>
+<!--End of Landing Page Footer-->
+
+<!-- Included JS Files (Compressed) -->
+
+<script type="text/javascript" src="https://www.pyimagesearch.com/wp-content/cache/minify/85c7d.js"></script>
+
+<script type="text/javascript">
+function getQueryParams(){
+    // initialize the list of query variables and grab
+    // the hashes
+    var vars = [];
+    var hashes = window.location.href.slice(window.location.href.indexOf("?") + 1).split("&");
+
+    // loop over the hashes
+    for (i = 0; i < hashes.length; i++){
+        // parse out the hash value
+        hash = hashes[i].split("=");
+        vars.push(hash[0])
+        vars[hash[0]] = hash[1];
+    }
+
+    // return the query parameter mappings
+    return vars;
+}
+
+// wait until the document is ready
+$(document).ready(function(){
+    // handle when the join buttons are clicked
+    $(".join_the_course").click(function(event){
+        // prevent the default event from firing
+        event.preventDefault();
+
+        // scroll to the pricing section
+        $("html, body").animate({
+            "scrollTop": $("#pricing").offset().top}, 1000);
+    });
+
+    // handle when the signup links are clicked
+    $(".signup_link").click(function(event){
+        // prevent the default event from firing,
+        // then grab the href of the link and the
+        // product
+        event.preventDefault();
+        product = $(this).attr("data-product");
+        href = $(this).attr("href");
+
+		// determine the Drip event
+		dripTag = product.split("_");
+
+		// check to see if this is the "instant access
+		// membership"
+		if (dripTag[0] == "instant"){
+			dripTag = "clicked instant access membership";
+		}
+
+		// otherwise, this is the "apprentice membership"
+		else{
+			dripTag = "clicked apprentice membership";
+		}
+
+		// send the tag to Drip
+		window._dcq = window._dcq || [];
+		window._dcq.push(["identify", {"tags": [dripTag]}]);
+
+		// retargeting
+		window._pq = window._pq || [];;
+		_pq.push(["track", "gurus_add_to_cart"]);
+
+        // grab the query parameters, then initialize the
+        // email address
+        params = getQueryParams();
+        email = "";
+
+        // if the email address is set, grab it
+        if (params["email"]){
+            email = decodeURIComponent(params["email"]);
+        }
+
+        // construct the URL to track the click
+        url = "https://www.pyimagesearch.com/static/app/cart_tracker/track/";
+        url += "?email=" + email + "&product=" + product;
+
+        // track the click
+        $.ajax({
+            "type": "POST",
+            "url": url,
+            "async": false,
+            "dataType": "json",
+            "success": function(data){
+                // change location to the provided href
+                document.location = href;
+		}});
+    });
+});
+</script>
+
+<script type="text/javascript">
+  (function() {
+    window._pa = window._pa || {};
+    // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+    // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+    // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+    var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.async = true;
+    pa.src = ('https:' == document.location.protocol ? 'https:' : 'http:') + "//tag.perfectaudience.com/serve/54220efd7ab7f03f7e000043.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+  })();
+</script>
+
+<!-- HitTail Code -->
+<script type="text/javascript">
+    (function(){ var ht = document.createElement('script');ht.async = true;
+      ht.type='text/javascript';ht.src = '//115962.hittail.com/mlt.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ht, s);})();
+</script>
+
+<!-- Drip -->
+<script type="text/javascript">
+  var _dcq = _dcq || [];
+  var _dcs = _dcs || {};
+  _dcs.account = '4768429';
+
+  (function() {
+    var dc = document.createElement('script');
+    dc.type = 'text/javascript'; dc.async = true;
+    dc.src = '//tag.getdrip.com/4768429.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(dc, s);
+  })();
+</script>
+
+<!-- Optin Monster -->
+<div id="om-kizfm1tpclo79dji-holder"></div>
+<script>var kizfm1tpclo79dji,kizfm1tpclo79dji_poll=function(){var r=0;return function(n,l){clearInterval(r),r=setInterval(n,l)}}();!function(e,t,n){if(e.getElementById(n)){kizfm1tpclo79dji_poll(function(){if(window['om_loaded']){if(!kizfm1tpclo79dji){kizfm1tpclo79dji=new OptinMonsterApp();return kizfm1tpclo79dji.init({"u":"18464.358677","staging":0,"dev":0,"beta":0});}}},25);return;}var d=false,o=e.createElement(t);o.id=n,o.src="//a.optnmnstr.com/app/js/api.min.js",o.onload=o.onreadystatechange=function(){if(!d){if(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"){try{d=om_loaded=true;kizfm1tpclo79dji=new OptinMonsterApp();kizfm1tpclo79dji.init({"u":"18464.358677","staging":0,"dev":0,"beta":0});o.onload=o.onreadystatechange=null;}catch(t){}}}};(document.getElementsByTagName("head")[0]||document.documentElement).appendChild(o)}(document,"script","omapi-script");</script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46641058-1', 'pyimagesearch.com');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
+
+Object Caching 2275/2295 objects using disk
+Page Caching using disk: enhanced
+Minified using disk
+Database Caching 1/11 queries in 0.006 seconds using disk
+
+ Served from: www.pyimagesearch.com @ 2017-04-05 11:54:01 by W3 Total Cache -->

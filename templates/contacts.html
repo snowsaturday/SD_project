@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block content %}
+<!--Start of Main Content-->
+    <article role="main">
+    <div id="main_content">
+
+
+
+
+        {% for contact in contacts %}
+        <section class="background_white">
+        <div class="row">
+
+
+                    <nav class="breadcrumb">
+              <a class="breadcrumb-item" href="/">Главная</a>
+              <span class="breadcrumb-item active">Контакты</span>
+
+            </nav>
+
+
+
+            <div class="one_third">
+                <h2>{{ contact.name }}</h2>
+                <br>
+                <strong>Расположен по адресу:</strong>
+                <br>
+                {{ contact.address }}
+                <br><br>
+                <strong>Телефон для записи:</strong>
+                <br>
+                {{ contact.phone_number }}<br>
+                {{ contact.phone_number_additional_1 }}<br>
+                {{ contact.phone_number_additional_2 }}<br>
+                <br>
+                <strong>График работы:</strong>
+                <br>
+                Ежедневно с 9:00 до 20:00
+            </div>
+
+
+            <div class="two_thirds last">
+                {% autoescape off %}
+                {{ contact.map }}
+                {% endautoescape %}
+            </div>
+
+
+        </section>
+        {% endfor %}
+
+
+    </div>
+    </article>
+    <!--End of Main Content-->
+{% endblock %}
+

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Анализы{% endblock %}
+{% block content %}
+    <!--Start of Main Content-->
+    <article role="main">
+    <div id="main_content">
+        <!--Start categoryzed table -->
+        <section class="background_white">
+            <div class="row">
+                <nav class="breadcrumb">
+                    <a class="breadcrumb-item" href="/">Главная</a>
+                    <span class="breadcrumb-item active">Анализы <span class="badge badge-info">Invitro</span></span>
+                </nav>
+                <div class="one_third">
+                        {% for profile in profiles %}
+                        <a href="/analyzes/{{ profile.slug_id }}" class="list-group-item">
+                            {{ profile.profile_title }}
+                        </a>
+                        {% endfor %}
+                </div>
+                <div class="two_thirds last">
+                    <h2 class="section_title" style="font-size: 37px; font-weight: bold; background-image: none;">
+                        Лабораторные исследования в СТУДИЯ ДОКТОР
+                    </h2>
+                    <br>
+                    <div class="alert alert-success" role="alert">
+                        <strong>Прием | забор образцов для исследований</strong> производится ежедневно <strong>с 9.00 до 13.00</strong>
+                        по <a href="/contact/" class="alert-link">адресу</a>. Для вашего удобства получить результаты анализов вы можете
+                        на электроную почту. Сообщите адрес почтового ящика при оформлении администратору.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End categoryzed table-->
+        </div>
+    </article>
+    <!--End of Main Content-->
+{% endblock %}
+
